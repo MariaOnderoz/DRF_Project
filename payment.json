@@ -1,0 +1,46 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$NDN2j7KrnVCTOiP4LpnYFK$4ote2GbQv4oIxnqUP3Sm7jZYV6OcolU7DBXc7GvyhIU=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-07-01T03:51:13.431Z",
+      "email": "admin@example.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-07-01T04:28:44.208Z",
+      "paid_course": 2,
+      "paid_lesson": null,
+      "amount": 2000,
+      "payment_method": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "payment_date": "2024-07-01T04:29:49.695Z",
+      "paid_course": 4,
+      "paid_lesson": null,
+      "amount": 5000,
+      "payment_method": "transfer"
+    }
+  }
+]
