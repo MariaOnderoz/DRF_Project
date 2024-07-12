@@ -15,3 +15,6 @@ def send_email(course_id):
         from_email=settings.EMAIL_HOST_USER,
         recipient_list=[subscribers.user.email],
     )
+
+
+

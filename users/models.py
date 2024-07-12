@@ -36,6 +36,9 @@ class Payment(models.Model):
         ("transfer", "Перевод на счет")
     ])
 
+    session_id = models.CharField(max_length=255, verbose_name="Id сессии", **NULLABLE)
+    link = models.URLField(max_length=400, verbose_name="Ссылка на оплату", **NULLABLE)
+
     def __str__(self):
         return f"{self.user} - {self.amount}"
 
