@@ -7,7 +7,7 @@ def create_stripe_price(amount):
     return stripe.Price.create(
         currency="usd",
         unit_amount=amount * 100,
-        recurring={"interval": "month"},
+        # recurring={"interval": "month"},
         product_data={"name": "Payment"},
     )
 
