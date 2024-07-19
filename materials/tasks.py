@@ -9,12 +9,14 @@ def send_email(course_id):
     course = Course.objects.get(id=course_id)
     subscribers = Subscription.objects.filter(course=course)
 
-    send_mail(
-        subject=f"Обновление курса {course}",
-        message=f"Курс {course} был обновлен",
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[subscribers.user.email],
-    )
+    for subscriber in subscribers:
+
+        send_mail(
+            subject=f"Обновление курса {course}",
+            message=f"Курс {course} был обновлен",
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[subscriber.user.email],
+        )
 
 
 
