@@ -12,3 +12,4 @@ drf-yasg==1.21.7
 stripe==10.2.0
 redis==5.0.7
 django-celery-beat==2.6.0
+django-filter==24.2
